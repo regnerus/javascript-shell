@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<!--
+	Javascript Shell by Bouke Regnerus
+	No dependencies bash-like shell in the browser
+
+	Based on Javascript Shell by Jesse Ruderman (http://www.squarefree.com/shell/)
+	Styling based on CodePen by Rafael Rinaldi (http://codepen.io/rafaelrinaldi/pen/uGifm)
+-->
+
+<html lang="en" onclick="keepFocusInTextbox(event)">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascritp Shell</title>
+
+	<link rel="stylesheet" href="terminal.css">
+	<script src="terminal.js"></script>
+</head>
+<body onload="init()">
+	<article class="terminal">
+		<section id="terminal-output">
+			<p class=" terminal--header ">Type HELP to get a list of commands</p>
+		</section>
+
+		<section class="terminal--input"> 
+			<input type="text" id="terminal-input" wrap="off" onkeydown="terminalInputKeydown(event)"></input>
+		</section>
+	</article>
+</body>
+</html>
